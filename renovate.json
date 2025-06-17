@@ -1,0 +1,11 @@
+{
+  "extends": ["config:base"],
+  "postUpdateOptions": ["pnpmDedupe"],
+  "packageRules": [
+    {
+      "groupName": "dependency upgrades - non-major",
+      "matchDepTypes": ["devDependencies", "packageManager"],
+      "updateTypes": ["patch", "minor"]
+    }
+  ]
+}
