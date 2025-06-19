@@ -1,7 +1,7 @@
 {
   "extends": ["config:base"],
-  "postUpdateOptions": ["pnpmDedupe"],
   "packageRules": [
+    { "matchPackageNames": ["!pnpm"], "postUpdateOptions": ["pnpmDedupe"] },
     {
       "groupName": "dependency upgrades - non-major",
       "matchDepTypes": ["devDependencies", "packageManager"],
